@@ -34,7 +34,7 @@ window.DNI = [
   {
     dzien: 3, typ: 'webinar',
     tytul: 'AI w gastronomii: jak go używać i jakich błędów unikać',
-    opis: 'Webinar na żywo 3 grudnia. Dowiesz się, do czego sztuczna inteligencja naprawdę przydaje się w kuchni i biurze firmy cateringowej oraz jakich błędów lepiej unikać.',
+    opis: 'Webinar na żywo 3 grudnia o 18:00. Dowiesz się, do czego sztuczna inteligencja naprawdę przydaje się w kuchni i biurze firmy cateringowej oraz jakich błędów lepiej unikać.',
     korzysci: ['Dowiesz się, które zadania warto oddać AI', 'Unikniesz najczęstszych wpadek'],
     cta: 'Oglądaj webinar',
     url: 'https://youtube.com/live/Xp1-mkV4_Cs',
@@ -83,8 +83,8 @@ window.DNI = [
   {
     dzien: 9, typ: 'material',
     tytul: 'Jak wygrać przetarg w placówkach oświatowych',
-    opis: 'Poradnik dla firm cateringowych, które chcą startować w przetargach na żywienie w szkołach i przedszkolach: jak przygotować się do przetargu i zwiększyć szanse na wygraną.',
-    korzysci: ['Dowiesz się, jak przygotować się do przetargu w placówce oświatowej', 'Zobaczysz, na co zwrócić uwagę, żeby Twoja oferta wygrywała'],
+    opis: 'Dowiedz się, jakie błędy eliminują firmy z przetargów na catering szkolny, i sprawdź checklistą, czy Twoja oferta jest gotowa.',
+    korzysci: ['Dowiesz się, jakie błędy najczęściej eliminują firmy z przetargów', 'Sprawdzisz checklistą, czy Twoja oferta jest gotowa'],
     cta: 'Pobierz poradnik', url: 'https://wiedza.obiado.pl/hubfs/Materia%C5%82y%20do%20pobrania/Jak%20wygra%C4%87%20przetarg%20w%20plac%C3%B3wkach%20o%C5%9Bwiatowych.pdf',
   },
   {
