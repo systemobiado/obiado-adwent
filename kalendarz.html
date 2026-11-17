@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Kalendarz adwentowy Obiado</title>
+  <link rel="icon" href="img/sygnet-orange.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261117b">
+</head>
+<body>
+
+<!-- ekran dla osób bez linku z maila -->
+<div class="brama" id="brama" hidden>
+  <div class="snow" id="snieg-brama" aria-hidden="true"></div>
+  <div class="brama__karta">
+    <img src="img/logo-orange.png" alt="Obiado" width="130" height="34">
+    <h1>Ten kalendarz jest dla zapisanych osób</h1>
+    <p>Zostaw adres e-mail na stronie startowej, a wyślemy Ci link do kalendarza. Jeśli już go masz, otwórz link z maila.</p>
+    <a class="btn" href="index.html#formularz">Zapisz się do kalendarza</a>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <header class="hero cal-hero">
+    <div class="snow" id="snieg" aria-hidden="true"></div>
+    <svg class="garland" aria-hidden="true" preserveAspectRatio="none">
+      <defs>
+        <pattern id="girlanda" width="240" height="70" patternUnits="userSpaceOnUse">
+          <path d="M0 4 Q60 36 120 4 Q180 36 240 4" fill="none" stroke="#1F2229" stroke-width="2.2" opacity=".55"/>
+          <g stroke="#1F2229" stroke-width="1.6" opacity=".55"><path d="M30 16V30M90 16V36M150 16V30M210 16V36"/></g>
+          <circle cx="30" cy="38" r="9" fill="#F9B023"/><circle cx="90" cy="44" r="8" fill="#fff"/>
+          <circle cx="150" cy="38" r="9" fill="#FFE5C2"/><circle cx="210" cy="44" r="8" fill="#1F2229"/>
+          <circle cx="27" cy="35" r="2.4" fill="#fff" opacity=".7"/><circle cx="147" cy="35" r="2.4" fill="#fff" opacity=".7"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="70" fill="url(#girlanda)"/>
+    </svg>
+
+    <div class="wrap">
+      <div class="topbar">
+        <a href="https://obiado.pl" aria-label="Obiado"><img src="img/logo-white.png" alt="Obiado" width="130" height="34"></a>
+        <button class="btn btn--ghost btn--small" id="udostepnij" type="button" style="box-shadow:inset 0 0 0 2px currentColor">
+          <span>Podeślij znajomym</span>
+        </button>
+      </div>
+
+      <div class="cal-hero__inner">
+        <div>
+          <h1>Kalendarz adwentowy <em>Obiado</em></h1>
+          <p class="cal-status" id="status"></p>
+          <div class="cal-hero__actions" id="akcje"></div>
+          <div class="odliczanie" id="odliczanie" aria-live="off" hidden>
+            <span class="odliczanie__etykieta" id="odl-etykieta">Do Wigilii zostało</span>
+            <div class="odliczanie__kafle">
+              <span><b id="odl-d">00</b><i>dni</i></span>
+              <span><b id="odl-g">00</b><i>godz.</i></span>
+              <span><b id="odl-m">00</b><i>min</i></span>
+              <span><b id="odl-s">00</b><i>sek.</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="choinka" aria-hidden="true">
+          <svg viewBox="0 0 300 392" role="img" focusable="false">
+            <ellipse cx="150" cy="376" rx="96" ry="9" fill="#1F2229" opacity=".16"/>
+            <rect x="130" y="316" width="40" height="56" rx="7" fill="#1F2229"/>
+            <g fill="#80CBC9" stroke="#80CBC9" stroke-width="14" stroke-linejoin="round">
+              <polygon points="150,176 54,312 246,312"/>
+              <polygon points="150,100 82,212 218,212"/>
+              <polygon points="150,46 110,124 190,124"/>
+            </g>
+            <g stroke="#1F2229" stroke-opacity=".13" stroke-width="7" stroke-linecap="round">
+              <path d="M62 314H238"/><path d="M90 214H210"/><path d="M116 126H184"/>
+            </g>
+            <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.01 11" opacity=".95">
+              <path d="M114 116Q150 142 186 116"/>
+              <path d="M94 198Q150 236 206 198"/>
+              <path d="M70 296Q150 344 230 296"/>
+            </g>
+            <g class="choinka__gwiazda"><path d="M12 2l2.4 7.2H22l-6.2 4.5 2.4 7.3L12 16.5 5.8 21l2.4-7.3L2 9.2h7.6z" transform="translate(126 4) scale(2)" fill="#F9B023"/></g>
+            <!-- bombki: kółka z sygnetem Obiado (jak w brandbooku) -->
+            <g>
+              <circle cx="150" cy="92" r="15" fill="#F9B023"/><image href="img/sygnet-white.png" x="139" y="81" width="22" height="22"/>
+              <circle cx="132" cy="156" r="16" fill="#F54E29"/><image href="img/sygnet-white.png" x="121" y="145" width="22" height="22"/>
+              <circle cx="172" cy="172" r="16" fill="#FFE5C2"/><image href="img/sygnet-orange.png" x="161" y="161" width="22" height="22"/>
+              <circle cx="150" cy="222" r="19" fill="#F9B023"/><image href="img/sygnet-white.png" x="136" y="208" width="28" height="28"/>
+              <circle cx="104" cy="252" r="18" fill="#FFE5C2"/><image href="img/sygnet-orange.png" x="91" y="239" width="26" height="26"/>
+              <circle cx="198" cy="254" r="18" fill="#F54E29"/><image href="img/sygnet-white.png" x="185" y="241" width="26" height="26"/>
+              <circle cx="150" cy="282" r="20" fill="#FFE5C2"/><image href="img/sygnet-orange.png" x="135" y="267" width="30" height="30"/>
+              <circle cx="84" cy="296" r="14" fill="#F54E29"/><image href="img/sygnet-white.png" x="74" y="286" width="20" height="20"/>
+              <circle cx="218" cy="296" r="14" fill="#F9B023"/><image href="img/sygnet-white.png" x="208" y="286" width="20" height="20"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="pasek">
+    <div class="wrap">
+      <span id="pasek-lewy"></span>
+      <span class="postep"><span id="postep-tekst"></span><span class="postep__tor"><i id="postep-pasek"></i></span></span>
+    </div>
+  </div>
+
+  <main class="kalendarz">
+    <div class="wrap">
+      <ol class="doors" id="drzwi"></ol>
+      <div class="pod-kalendarzem">
+        <p>Okienka z minionych dni możesz otworzyć w dowolnej chwili.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="stopka">
+    <div class="wrap">
+      <img src="img/logo-white.png" alt="Obiado" width="100" height="26">
+      <span id="stopka-linki"></span>
+    </div>
+  </footer>
+</div>
+
+<dialog class="modal" id="modal" aria-labelledby="m-tytul">
+  <div class="modal__card">
+    <button class="modal__close" id="m-zamknij" type="button" aria-label="Zamknij">×</button>
+    <div class="modal__side">
+      <span class="modal__dzien" id="m-dzien"></span>
+      <span class="modal__data" id="m-data"></span>
+    </div>
+    <div class="modal__body">
+      <span class="chip" id="m-chip"></span>
+      <h2 id="m-tytul"></h2>
+      <p class="modal__autor" id="m-autor"></p>
+      <p class="modal__opis" id="m-opis"></p>
+      <ul class="modal__korzysci" id="m-korzysci"></ul>
+      <div class="modal__akcje" id="m-akcje"></div>
+      <p class="modal__notatka" id="m-notatka" hidden></p>
+    </div>
+  </div>
+</dialog>
+
+<div class="konfetti" id="konfetti" aria-hidden="true"></div>
+
+<script src="js/config.js?v=20261117b"></script>
+<script src="js/dni.js?v=20261117b"></script>
+<script src="js/wspolne.js?v=20261117b"></script>
+<script src="js/kalendarz.js?v=20261117b"></script>
+</body>
+</html>

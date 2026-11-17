@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalendarz adwentowy Obiado</title>
+  <meta name="description" content="24 okienka z materiałami edukacyjnymi dla firm cateringowych: webinary, checklisty, kalkulatory i wzory. Codziennie o 8:00 nowe okienko. Zapisz się i odbierz darmowy dostęp.">
+  <meta property="og:title" content="Kalendarz adwentowy Obiado">
+  <meta property="og:description" content="Codziennie o 8:00 nowe okienko z materiałami, które pomogą rozwinąć Twoją firmę cateringową.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/sygnet-orange.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261117b">
+</head>
+<body>
+
+<header class="hero landing-hero">
+  <div class="snow" id="snieg" aria-hidden="true"></div>
+  <svg class="garland" aria-hidden="true" preserveAspectRatio="none">
+    <defs>
+      <pattern id="girlanda" width="240" height="70" patternUnits="userSpaceOnUse">
+        <path d="M0 4 Q60 36 120 4 Q180 36 240 4" fill="none" stroke="#1F2229" stroke-width="2.2" opacity=".55"/>
+        <g stroke="#1F2229" stroke-width="1.6" opacity=".55"><path d="M30 16V30M90 16V36M150 16V30M210 16V36"/></g>
+        <circle cx="30" cy="38" r="9" fill="#F9B023"/><circle cx="90" cy="44" r="8" fill="#fff"/>
+        <circle cx="150" cy="38" r="9" fill="#FFE5C2"/><circle cx="210" cy="44" r="8" fill="#1F2229"/>
+        <circle cx="27" cy="35" r="2.4" fill="#fff" opacity=".7"/><circle cx="147" cy="35" r="2.4" fill="#fff" opacity=".7"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="70" fill="url(#girlanda)"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a href="https://obiado.pl" aria-label="Obiado"><img src="img/logo-white.png" alt="Obiado" width="130" height="34"></a>
+    </div>
+
+    <div class="landing-hero__grid">
+      <div>
+        <span class="pill eyebrow" id="pill-start">Start <b>1 grudnia</b></span>
+        <h1>Kalendarz adwentowy <em>Obiado</em></h1>
+        <p class="lead">Może i nie dostaniesz w środku czekoladki, ale za to otrzymasz materiały edukacyjne, które pomogą rozwinąć Twoją firmę cateringową <span style="margin-right:.25em">🙂</span> Codziennie o 8:00 otwierasz jedno okienko, a w kalendarzu znajdziesz też materiały przygotowane tylko dla osób, które odbiorą do niego dostęp.</p>
+        <div class="oko">
+          <span id="ico-1"></span>
+          <span id="ico-2"></span>
+          <span id="ico-3"></span>
+        </div>
+      </div>
+
+      <div class="form-card" id="formularz">
+        <h2>Zapisz się i odbierz link do kalendarza</h2>
+        <p class="sub">Link przyjdzie mailem. Codziennie rano dostaniesz też krótkie przypomnienie, że czeka nowe okienko.</p>
+        <div id="hs-form"></div>
+        <p class="male">Zapisując się, zgadzasz się na otrzymywanie od Obiado wiadomości związanych z kalendarzem. Możesz zrezygnować w każdej chwili.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <h2>Jak to działa</h2>
+      <div class="kroki">
+        <div class="krok"><h3>Zapisz się</h3><p>Zostaw imię i adres e-mail. To zajmie pół minuty.</p></div>
+        <div class="krok"><h3>Odbierz link</h3><p>Link do kalendarza dostaniesz mailem w ciągu kilku minut. Zapisz go w zakładkach.</p></div>
+        <div class="krok"><h3>Otwieraj codziennie</h3><p>Od 1 grudnia każdego dnia o 8:00 odblokowuje się jedno okienko. Jeśli któreś Cię ominie, zostaje otwarte i możesz do niego wrócić.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section srodek">
+    <div class="wrap">
+      <h2>Co kryje się za okienkami</h2>
+      <div class="srodek__grid" id="kafle"></div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap">
+      <h2>Do zobaczenia 1 grudnia!</h2>
+      <p>Zapisz się teraz, a pierwsze okienko będzie czekać na Ciebie 1 grudnia o 8:00.</p>
+      <a class="btn btn--amber" href="#formularz">Zapisz się do kalendarza</a>
+      <div class="dziel">
+        <p>Znasz kogoś z branży, komu ten kalendarz mógłby się przydać? Podeślij mu link.</p>
+        <button class="btn btn--ghost btn--small" id="udostepnij" type="button"><span>Skopiuj link i podeślij dalej</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <img src="img/logo-white.png" alt="Obiado" width="100" height="26">
+    <span id="stopka-linki"></span>
+  </div>
+</footer>
+
+<script src="js/config.js?v=20261117b"></script>
+<script src="js/dni.js?v=20261117b"></script>
+<script src="js/wspolne.js?v=20261117b"></script>
+<script src="js/landing.js?v=20261117b"></script>
+</body>
+</html>
